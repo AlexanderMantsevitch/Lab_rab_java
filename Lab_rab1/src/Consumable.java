@@ -1,2 +1,3 @@
-package PACKAGE_NAME;public interface Consumable {
+public interface Consumable {
+    public abstract void consume ();
 }
