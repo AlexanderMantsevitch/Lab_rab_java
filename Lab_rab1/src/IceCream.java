@@ -14,13 +14,20 @@ public class IceCream extends Food
     public void consume ()
     {
 
-       System.out.println( this + "Съедено");
+       System.out.println( this + " скушали");
 
     }
 
+    public Integer calculateCalories()
+    {
+        if (syrup.equals( "шоколад") ) return 500;
+        if (syrup.equals( "карамель")) return 600;
+        else return 0;
+
+    }
     public String toString ()
     {
-        return super.toString() + "c" + syrup + " сиропом съедено";
+        return super.toString() + " c сиропом " + syrup;
 
     }
     public String  get_syrup()
@@ -36,9 +43,14 @@ public class IceCream extends Food
     }
 
     public boolean equals(Object arg0) {
+        if (super.equals(arg0)) {
         if (!(arg0 instanceof IceCream)) return false;
-        if (syrup==null || ((IceCream)arg0).syrup==null) return false;
+      //  if (syrup==null || ((IceCream)arg0).syrup==null) return false;
         return syrup.equals(((IceCream)arg0).syrup);
+        } else
+        {
+            return false;
+        }
     }
 
 }

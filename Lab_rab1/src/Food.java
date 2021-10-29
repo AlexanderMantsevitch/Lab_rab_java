@@ -1,5 +1,6 @@
-public abstract class Food implements Consumable
+public abstract class Food implements Consumable,  Nutritious
 {
+
      String Name = null;
 
      public Food (String name) {
