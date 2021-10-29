@@ -31,6 +31,13 @@ public class MainApplication {
 
      Arrays.sort (breakfast, new FoodComparator());
      System.out.println( breakfast[0].getName() +" " + breakfast[1].getName() +" "+ breakfast[2].getName() );
+     int calories = 0;
+     for (int i = 0; i < parts.length; i++)
+     {
+         calories += breakfast [i].calculateCalories();
+
+     }
+        System.out.println ("Calories in breakfast = " + calories );
     }
 
 }
