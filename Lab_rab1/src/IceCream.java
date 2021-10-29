@@ -4,10 +4,10 @@ public class IceCream extends Food
 
     private String syrup;
 
-    public IceCream ()
+    public IceCream (String syrup)
     {
         super ("IceCream");
-
+        this.syrup = syrup;
     }
 
 
@@ -18,6 +18,11 @@ public class IceCream extends Food
 
     }
 
+    public String toString ()
+    {
+        return super.toString() + "c" + syrup + " сиропом съедено";
+
+    }
     public String  get_syrup()
     {
         return syrup;
