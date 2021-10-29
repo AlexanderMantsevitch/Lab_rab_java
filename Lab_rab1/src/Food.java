@@ -30,4 +30,5 @@ public abstract class Food implements Consumable,  Nutritious
           this.Name = name;
 
      }
+
 }
